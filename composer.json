@@ -41,7 +41,8 @@
                 "Review": "Laramaster\\Nuclues\\Review",
                 "Site": "Laramaster\\Nuclues\\Site",
                 "Widget": "Laramaster\\Nuclues\\Widget",
-                "Slider": "Laramaster\\Nuclues\\Slider"
+                "Slider": "Laramaster\\Nuclues\\Slider",
+                "Page": "Laramaster\\Nuclues\\Page"
 
             }
         }

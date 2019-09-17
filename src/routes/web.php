@@ -66,36 +66,6 @@ Route::group(['namespace'=>'Laramaster\Nuclues\Http\Controllers\admin','prefix'=
 
 });
 
-Route::group(['namespace'=>'Laramaster\Nuclues\Http\Controllers'],function(){
-	Route::get('/','IndexController@index')->name('home.index');
-	Route::get('/add-to-cart/{id}','CartController@getAddToCart')->name('add-to-cart');
-	Route::get('/wishlist-to-cart/{id}','WishlistController@wishtocart')->name('wishlist-to-cart');
-	Route::get('/cart','CartController@cart')->name('cart');
-	Route::get('/cart/remove/{id}','CartController@remove')->name('cart.remove');
-	Route::get('/cart/update','CartController@update')->name('cart.update');
-	Route::get('/product/{id}','ProductController@product_show')->name('product');
-	Route::get('/next_previous/{id}','ProductController@preview_product')->name('next_preview_product');
-	Route::get('/add-to-wishlist/{id}','WishlistController@getAddToWishlist')->name('add-to-wishlist');
-	Route::get('/wishlist','WishlistController@wishlist')->name('wishlist');
-	Route::get('/currency/price','CurrencyController@currency')->name('currency.price');
-	Route::get('/wishlist/remove/{id}','WishlistController@remove')->name('remove');
-	Route::get('/getAddToCompare/{id}','CompareController@getAddToCompare')->name('getAddToCompare');
-	Route::get('/contact','IndexController@contact')->name('home.contact');
-	Route::post('/contact/store','IndexController@store')->name('contact');
-	Route::post('/subscriber/store','IndexController@subscriber')->name('subscriber');
-
-	Route::post('/stripe','IndexController@stripe')->name('stripe');
-
-	Route::get('/checkout','CheckoutController@index')->name('checkout');
-	Route::post('/order','CheckoutController@order')->name('order');
-	Route::get('/blogs/details/{slug}','BlogController@details')->name('blog.details');
-	Route::post('/coupon/store','CouponController@store')->name('coupon.store');
-
-	Route::post('/review','ReviewController@store')->name('review.store');
-
-
-
-});
 
 
 

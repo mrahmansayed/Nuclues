@@ -14,7 +14,6 @@ class NucluesServiceProvider extends ServiceProvider
 
          $this->publishes([
               __DIR__.'/public' => public_path('/backend'),
-              __DIR__.'/public/frontend' => public_path('/frontend'),
               __DIR__.'/config/nuclues.php' => config_path('nuclues.php'),
               __DIR__.'/views/backend/layouts/partials/sidebar.blade.php' => resource_path('views/nuclues/sidebar.blade.php'),
               __DIR__.'/views/admin/product' => resource_path('/views/nuclues/example'),
