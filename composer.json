@@ -1,0 +1,49 @@
+{
+    "name": "laramaster/nuclues",
+    "description": "Ecommerce for laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Arafat Hossain",
+            "email": "harafat949@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+    },
+     "autoload": {
+        
+        "psr-4": {
+            "Laramaster\\Nuclues\\": "src/"
+        }
+    },
+    "extra": {
+    "laravel": {
+            "providers": [
+                "Laramaster\\Nuclues\\NucluesServiceProvider"
+            ],
+            "aliases": {
+                "Slider": "Laramaster\\Nuclues\\Slider",
+                "Cart": "Laramaster\\Nuclues\\Cart",
+                "Product": "Laramaster\\Nuclues\\Products",
+                "Wishlist": "Laramaster\\Nuclues\\Wishlist",
+                "Currencies": "Laramaster\\Nuclues\\Currencies",
+                "Compare": "Laramaster\\Nuclues\\Compare",
+                "Admin": "Laramaster\\Nuclues\\Admin",
+                "Contact": "Laramaster\\Nuclues\\Contact",
+                "Subscriber": "Laramaster\\Nuclues\\Subscriber",
+                "Category": "Laramaster\\Nuclues\\Categories",
+                "Order": "Laramaster\\Nuclues\\Order",
+                "Blog": "Laramaster\\Nuclues\\Blog",
+                "Navigation": "Laramaster\\Nuclues\\Navigation",
+                "Coupon": "Laramaster\\Nuclues\\Coupon",
+                "Review": "Laramaster\\Nuclues\\Review",
+                "Site": "Laramaster\\Nuclues\\Site",
+                "Widget": "Laramaster\\Nuclues\\Widget",
+                "Slider": "Laramaster\\Nuclues\\Slider"
+
+            }
+        }
+    }
+}
