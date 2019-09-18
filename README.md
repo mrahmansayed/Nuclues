@@ -198,7 +198,7 @@ You can use this method for get single blog item
 
 	Blog::details(1)
 
-### Category get();
+### Category get()
 
 Of course you also want to get the category content. This is where you'll use the `get` method. This method will return a Collection of categories which you can iterate over and show the content to your customers.
 
@@ -219,6 +219,78 @@ Now you want to get 5 or 3 latest,oldest category then you can use in this metho
 You can use this method for get subcategory by category
 
 	Category::get()->subcategory
+
+### Coupon::get()
+
+This method will return coupon details
+
+### Coupon::add('Coupon code')
+
+You can use this method for add coupon
+
+ 	Coupon::add('abc')
+
+### Coupon::check('Coupon code')
+
+This method will check that this coupon code has in your application
+
+	Coupon::check('abc123')
+
+### Currencies::get()
+
+You can use this method for get all currency 
+
+	Currencies::get()
+
+### Currencies::add('currency code')
+
+You can use this method for add currency in your application
+
+	Currencies::add('usd')
+
+### Currencies::price('Product price')
+
+You can use this method for product currency price
+
+	Currencies::price(100.00)
+
+### Currencies::codeCheck()
+
+You can use this method for check now which type currency has in your application
+	
+	Currencies::codeCheck()
+
+### Review::get('product id')
+
+You can use this method for get all review of your single product 
+
+	Review::get(1)
+
+### Review::add($data)
+
+You can use this method for add review
+	
+	$data = [
+		'product_id' => 1,
+		'name' => "Arafat Hossain",
+		'email' => "admin@example.com",
+		'rating' => 4,
+		'review' => "Wow! Nice product",
+	];
+
+	Review::add($data);
+
+### Review::rating('product id')
+
+You can use this method for get rating of a product
+
+	Review::rating(1) //will get like 3.6/4.2/5
+
+
+
+	
+
+	
 
 
 
