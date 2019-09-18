@@ -56,9 +56,9 @@ Now you want to get single product. So,you can use in this method. And you must 
 	
 	Products::details($product->subtitle);
 
-### Product::pre_next('1');
+### Product::pre_next(1);
 
-If you use this method you can get previous and next product. You need pass product is in this method.
+If you use this method you can get previous and next product. You need pass product id in this method.
 
 	Product::pre_next($product->id);
 
@@ -125,6 +125,80 @@ This method will be check that you have any item in cart
 You can use this method for delete all item from cart
 
 	Cart::destroy();
+
+### Wishlist::get();
+
+You can use this method for get your wishlist item.
+
+	Wishlist::get();
+
+### Wishlist::add('product id','product name','product price','product qty');
+
+You can use this method for add product in your wishlist
+
+	Wishlist::add(1,'product 1',100.00,4);
+
+### Wishlist::remove('wishlist id');
+
+You can use this method for delete item from wishlist
+
+	Wishlist::remove(1);
+
+### Wishlist::count();
+
+You can use this method for total wishlist quantity
+
+	Wishlist::count();
+
+### Wishlist::has();
+
+This method will be check that you have any item in wishlist
+
+	Wishlist::has();
+
+### Compare::get();
+
+You can use this method for get your Compare item.
+
+	Compare::get();
+
+### Compare::add('product id','product name','product price','product qty');
+
+You can use this method for add product in your Compare
+
+	Compare::add(1,'product 1',100.00,4);
+
+### Compare::remove('Compare id');
+
+You can use this method for delete item from Compare
+
+	Compare::remove(1);
+
+### Compare::count();
+
+You can use this method for total Compare quantity
+
+	Compare::count();
+
+### Compare::has();
+
+This method will be check that you have any item in Compare
+
+	Compare::has();
+
+### Blog::get();
+
+You can use this method for get blog item
+
+ 	Blog::get();
+
+
+
+
+
+
+
+
 
 
 
