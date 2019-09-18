@@ -23,7 +23,7 @@ class Currencies
 		$currency = Currency::all();
 		return $currency;
 	}
-	public static function code($code)
+	public static function add($code)
 	{
 		$currency = Currency::where('code',$code)->first();
 		session()->put('currency',$currency);

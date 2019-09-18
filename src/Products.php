@@ -47,6 +47,18 @@ class Products
 			}
 		}
 
+		if ($products == 'random') {
+			if ($count > 0) {
+				$product = Product::all()->random($count);
+				return $product;
+			}
+
+			if ($count == '') {
+				$product = Product::inRandomOrder()->get();
+				return $product;
+			}
+		}
+
 		if ($products == 'best_selling') {
 			if ($count > 0) {
 				$product = Product::orderBy('sell_count','DESC')->take($count)->get();
