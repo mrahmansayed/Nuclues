@@ -101,6 +101,8 @@ You can use this method for get cart subtotal price.
 ### Cart::total()
 
 You can use this method for get cart total price
+	
+	Cart::total()
 
 ### Cart::remove('cart id')
 
@@ -224,6 +226,8 @@ You can use this method for get subcategory by category
 
 This method will return coupon details
 
+	Coupon::get()
+
 ### Coupon::add('Coupon code')
 
 You can use this method for add coupon
@@ -285,6 +289,153 @@ You can use this method for add review
 You can use this method for get rating of a product
 
 	Review::rating(1) //will get like 3.6/4.2/5
+
+### Slider::get()
+
+Of course you also want to get the slider content. This is where you'll use the `get` method. This method will return a Collection of sliders which you can iterate over and show the content to your customers.
+
+	Slider::get()
+
+Suppose you want to get latest,oldest slider. So you can pass parameter in this method.
+
+	Slider::get('latest') //Will get latest slider
+	Slider::get('oldest') //will get oldest slider
+
+Now you want to get 5 or 3 latest,oldest slider then you can use in this method.
+
+	Slider::get('latest',3) //will get latest 3 slider
+	Slider::get('oldest',5) //will get oldest 5 slider
+
+### Site::logo()
+
+You can use this method for get site logo
+
+	Site::logo()
+
+### Site::name()
+
+You can use this method for get site name
+
+	Site::name()
+
+### Page::get()
+
+Of course you also want to get the page content. This is where you'll use the `get` method. This method will return a Collection of pages which you can iterate over and show the content to your customers.
+
+	Page::get()
+
+Suppose you want to get latest,oldest page. So you can pass parameter in this method.
+
+	Page::get('latest') //Will get latest page
+	Page::get('oldest') //will get oldest page
+
+Now you want to get 5 or 3 latest,oldest page then you can use in this method.
+
+	Page::get('latest',3) //will get latest 3 page
+	Page::get('oldest',5) //will get oldest 5 page
+
+### Navigation::get()
+
+Of course you also want to get the navigation content. This is where you'll use the `get` method. This method will return a Collection of navigations which you can iterate over and show the content to your customers.
+
+	Navigation::get()
+
+Suppose you want to get latest,oldest Navigation. So you can pass parameter in this method.
+
+	Navigation::get('latest') //Will get latest Navigation
+	Navigation::get('oldest') //will get oldest Navigation
+
+Now you want to get 5 or 3 latest,oldest Navigation then you can use in this method.
+
+	Navigation::get('latest',3) //will get latest 3 Navigation
+	Navigation::get('oldest',5) //will get oldest 5 Navigation
+
+### Navigation::menu('navigation name')
+
+You can use this method for get navigation menu
+	
+	Navigation::menu('Home')
+
+### Subscriber::add('Email')
+
+You can use this method for add subscriber
+
+	Subscriber::add('admin@email.com')
+
+### Contact::add('name','email','subject','message')
+
+You can use this method for add information in contact list
+
+	Contact::add('Arafat','admin@example.com','I need contact with you','Hello Arafat!')
+
+### Widget::get()	
+
+Of course you also want to get the widget content. This is where you'll use the `get` method. This method will return a Collection of widgets which you can iterate over and show the content to your customers.
+
+	Widget::get()
+
+Suppose you want to get latest,oldest widget. So you can pass parameter in this method.
+
+	Widget::get('latest') //Will get latest widget
+	Widget::get('oldest') //will get oldest widget
+
+Now you want to get 5 or 3 latest,oldest widget then you can use in this method.
+
+	Widget::get('latest',3) //will get latest 3 widget
+	Widget::get('oldest',5) //will get oldest 5 widget
+
+### Widget::byname('Widget Name')
+
+You can use this method for get a single method
+
+	Widget::byname('Shop Widget')
+
+### Admin::is()
+
+You can use this method for check that if User will be admin then he can access this controller
+
+	Admin::is()
+
+### Order::get()
+
+You can use this method for get all order item
+
+	Order::get()
+
+### Order::add($data)
+
+First you need add stripe package. 
+
+Run the Composer require command from the Terminal:
+	
+	composer require cartalyst/stripe-laravel
+
+Add follow `cartalyst/stripe-laravel` package requirment
+
+You can use this method for add order 
+
+	$data = [
+		'user_id' => 1,
+		'first_name' => "Arafat",
+		'last_name' => "Hossain",
+		'email' => "admin@example.com",
+		'phone' => 0175694...,
+		'address' => "Kirtipur",
+		'country' => "Bangladesh",
+		'city' => "Rajshahi",
+		'state' => "Naogaon",
+		'postal_code' => 6500,
+		'total_amount' => Cart::total(),
+		'payment_type' => "stripe",
+		'currency_type' => Currencies::type(),
+		'stripeToken' => $request->stripeToken, //It's will be stripe token
+	];
+
+	Order::add($data);
+
+### License
+
+The Laravel Nuclues package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
 
 
 
