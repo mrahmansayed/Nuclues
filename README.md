@@ -50,6 +50,89 @@ Now you want to get 5 or 3 latest,oldest,featured,best_selling,random product th
 	Product::get('best_selling',12); //will get best_selling 12 product
 	Product::get('random',15); //will get random 15 product
 
+### Products::details('product 1');
+
+Now you want to get single product. So,you can use in this method. And you must be pass product subtitle not product id.
+	
+	Products::details($product->subtitle);
+
+### Product::pre_next('1');
+
+If you use this method you can get previous and next product. You need pass product is in this method.
+
+	Product::pre_next($product->id);
+
+### Product::bycategory('categoryId',2);
+
+If you want to get product by category then you can use this method. 
+
+	Product::bycategory('categoryId',5); //First parameter will be your category id and second parameter will be how many product you want to get.  
+
+### Product::bysubcategory('subcategoryId',2);
+
+If you want to get product by subcategory then you can use this method. 
+
+	Product::bysubcategory('subcategoryId',5); //First parameter will be your subcategory id and second parameter will be how many product you want to get.  
+
+### Cart::get();
+
+You can use this method for get your cart item.
+
+	Cart::get();
+
+### Cart::add('product id','product name','product price','product qty');
+
+You can use this method for add product in your cart
+
+	Cart::add(1,'product 1',100.00,4);
+
+### Cart::update('product id','product qty');
+
+You can use this method for update cart
+
+	Cart::update(1,8);
+
+### Cart::subtotal();
+
+You can use this method for get cart subtotal price.
+
+	Cart::subtotal();
+
+### Cart::total();
+
+You can use this method for get cart total price
+
+### Cart::remove('cart id');
+
+You can use this method for delete item from cart
+
+	Cart::remove(1);
+
+### Cart::count();
+
+You can use this method for total cart quantity
+
+	Cart::count();
+
+### Cart::has();
+
+This method will be check that you have any item in cart
+
+	Cart::has();
+
+### Cart::destroy();
+
+You can use this method for delete all item from cart
+
+	Cart::destroy();
+
+
+
+
+
+
+
+
 
 
 
