@@ -83,7 +83,7 @@ img.page-image {
         </div>
       </div>
       <div class="bottombar"> 
-                            <span>© 2019. Dewwater. All Rights Reserved.</span>
+                            <span>© 2019. Laramaster. All Rights Reserved.</span>
                         </div>
       <!-- bottombar --> 
     </div>
