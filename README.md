@@ -28,169 +28,199 @@ Then you need migrate some table.
 
 The shoppingcart gives you the following methods to use:
 
-### Product::get();
+### Product::get()
 
 Of course you also want to get the product content. This is where you'll use the `get` method. This method will return a Collection of ProductsItems which you can iterate over and show the content to your customers.
 
-	Product::get();
+	Product::get()
 
 Suppose you want to get latest,oldest,featured,best selling,related products. So you can pass parameter in this method.
 
-	Product::get('latest'); //Will get latest product
-	Product::get('oldest'); //will get oldest product
-	Product::get('featured'); //will get featured product
-	Product::get('best_selling'); //will get best selling product
-	Product::get('random'); //will get random product
+	Product::get('latest') //Will get latest product
+	Product::get('oldest') //will get oldest product
+	Product::get('featured') //will get featured product
+	Product::get('best_selling') //will get best selling product
+	Product::get('random') //will get random product
 
 Now you want to get 5 or 3 latest,oldest,featured,best_selling,random product then you can use in this method.
 
-	Product::get('latest',3); //will get latest 3 product
-	Product::get('oldest',5); //will get oldest 5 product
-	Product::get('featured',7); //will get featured 7 product
-	Product::get('best_selling',12); //will get best_selling 12 product
-	Product::get('random',15); //will get random 15 product
+	Product::get('latest',3) //will get latest 3 product
+	Product::get('oldest',5) //will get oldest 5 product
+	Product::get('featured',7) //will get featured 7 product
+	Product::get('best_selling',12) //will get best_selling 12 product
+	Product::get('random',15) //will get random 15 product
 
-### Products::details('product 1');
+### Products::details('product 1')
 
 Now you want to get single product. So,you can use in this method. And you must be pass product subtitle not product id.
 	
-	Products::details($product->subtitle);
+	Products::details($product->subtitle)
 
-### Product::pre_next(1);
+### Product::pre_next(1)
 
 If you use this method you can get previous and next product. You need pass product id in this method.
 
-	Product::pre_next($product->id);
+	Product::pre_next($product->id)
 
-### Product::bycategory('categoryId',2);
+### Product::bycategory('categoryId',2)
 
 If you want to get product by category then you can use this method. 
 
-	Product::bycategory('categoryId',5); //First parameter will be your category id and second parameter will be how many product you want to get.  
+	Product::bycategory('categoryId',5) //First parameter will be your category id and second parameter will be how many product you want to get.  
 
-### Product::bysubcategory('subcategoryId',2);
+### Product::bysubcategory('subcategoryId',2)
 
 If you want to get product by subcategory then you can use this method. 
 
-	Product::bysubcategory('subcategoryId',5); //First parameter will be your subcategory id and second parameter will be how many product you want to get.  
+	Product::bysubcategory('subcategoryId',5) //First parameter will be your subcategory id and second parameter will be how many product you want to get.  
 
-### Cart::get();
+### Cart::get()
 
 You can use this method for get your cart item.
 
-	Cart::get();
+	Cart::get()
 
-### Cart::add('product id','product name','product price','product qty');
+### Cart::add('product id','product name','product price','product qty')
 
 You can use this method for add product in your cart
 
-	Cart::add(1,'product 1',100.00,4);
+	Cart::add(1,'product 1',100.00,4)
 
-### Cart::update('product id','product qty');
+### Cart::update('product id','product qty')
 
 You can use this method for update cart
 
-	Cart::update(1,8);
+	Cart::update(1,8)
 
-### Cart::subtotal();
+### Cart::subtotal()
 
 You can use this method for get cart subtotal price.
 
-	Cart::subtotal();
+	Cart::subtotal()
 
-### Cart::total();
+### Cart::total()
 
 You can use this method for get cart total price
 
-### Cart::remove('cart id');
+### Cart::remove('cart id')
 
 You can use this method for delete item from cart
 
-	Cart::remove(1);
+	Cart::remove(1)
 
-### Cart::count();
+### Cart::count()
 
 You can use this method for total cart quantity
 
-	Cart::count();
+	Cart::count()
 
-### Cart::has();
+### Cart::has()
 
 This method will be check that you have any item in cart
 
-	Cart::has();
+	Cart::has()
 
-### Cart::destroy();
+### Cart::destroy()
 
 You can use this method for delete all item from cart
 
-	Cart::destroy();
+	Cart::destroy()
 
-### Wishlist::get();
+### Wishlist::get()
 
 You can use this method for get your wishlist item.
 
-	Wishlist::get();
+	Wishlist::get()
 
-### Wishlist::add('product id','product name','product price','product qty');
+### Wishlist::add('product id','product name','product price','product qty')
 
 You can use this method for add product in your wishlist
 
-	Wishlist::add(1,'product 1',100.00,4);
+	Wishlist::add(1,'product 1',100.00,4)
 
-### Wishlist::remove('wishlist id');
+### Wishlist::remove('wishlist id')
 
 You can use this method for delete item from wishlist
 
-	Wishlist::remove(1);
+	Wishlist::remove(1)
 
-### Wishlist::count();
+### Wishlist::count()
 
 You can use this method for total wishlist quantity
 
-	Wishlist::count();
+	Wishlist::count()
 
-### Wishlist::has();
+### Wishlist::has()
 
 This method will be check that you have any item in wishlist
 
-	Wishlist::has();
+	Wishlist::has()
 
-### Compare::get();
+### Compare::get()
 
 You can use this method for get your Compare item.
 
-	Compare::get();
+	Compare::get()
 
-### Compare::add('product id','product name','product price','product qty');
+### Compare::add('product id','product name','product price','product qty')
 
 You can use this method for add product in your Compare
 
-	Compare::add(1,'product 1',100.00,4);
+	Compare::add(1,'product 1',100.00,4)
 
-### Compare::remove('Compare id');
+### Compare::remove('Compare id')
 
 You can use this method for delete item from Compare
 
-	Compare::remove(1);
+	Compare::remove(1)
 
-### Compare::count();
+### Compare::count()
 
 You can use this method for total Compare quantity
 
-	Compare::count();
+	Compare::count()
 
-### Compare::has();
+### Compare::has()
 
 This method will be check that you have any item in Compare
 
-	Compare::has();
+	Compare::has()
 
-### Blog::get();
+### Blog::get()
 
 You can use this method for get blog item
 
- 	Blog::get();
+ 	Blog::get()
+
+### Blog::details('blog id')
+
+You can use this method for get single blog item
+
+	Blog::details(1)
+
+### Category get();
+
+Of course you also want to get the category content. This is where you'll use the `get` method. This method will return a Collection of categories which you can iterate over and show the content to your customers.
+
+	Category::get()
+
+Suppose you want to get latest,oldest category. So you can pass parameter in this method.
+
+	Category::get('latest') //Will get latest Category
+	Category::get('oldest') //will get oldest Category
+
+Now you want to get 5 or 3 latest,oldest category then you can use in this method.
+
+	Category::get('latest',3) //will get latest 3 category
+	Category::get('oldest',5) //will get oldest 5 category
+
+### Category::get()->subcategory
+
+You can use this method for get subcategory by category
+
+	Category::get()->subcategory
+
+
 
 
 
