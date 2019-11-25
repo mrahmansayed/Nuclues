@@ -10,7 +10,7 @@ Run the Composer require command from the Terminal:
 	
 	composer require laramaster/nuclues
 
-Now you're ready to start using the shoppingcart in your application.
+Now you're ready to start using the Nuclues in your application.
 
 ## Usage
 
