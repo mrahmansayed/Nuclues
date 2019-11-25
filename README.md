@@ -26,7 +26,7 @@ Then you need migrate some table.
 
 	php artisan migrate
 
-The shoppingcart gives you the following methods to use:
+The Nuclues gives you the following methods to use:
 
 ### Product::get()
 
